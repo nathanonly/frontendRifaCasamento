@@ -1,0 +1,46 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.form-tittle {
+  margin: flex;
+}
+
+strong {
+  width: 200px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: lightcoral;
+}
+
+.testet {
+  width: 249px;
+  height: 200px;
+  background-color: red;
+}
+
+hr {
+  border: solid 1px;
+  color: blue;
+}
+
+#backcolor {
+  background-color: rgb(64, 64, 64);
+}
+
+body {
+  /* background-color: black; */
+  background-image: url(../images/fundo.jpg);
+  /* background-image: url('https://i.ibb.co/V3rV6hn/backgroundapp.jpg'); */
+}

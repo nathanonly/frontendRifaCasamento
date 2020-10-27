@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://i.ibb.co/bKWqMfH/logocasamento.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+
+    <!-- Importante para o materialize CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- Definição do título do projeto -->
+    <title>Casamento Junio & Anna Bia</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!--
+      O React entra aqui.
+      
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <div class="navbar-fixed">
+      <nav class="lighten-1" id="backcolor" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a>
+          <a id="logo-container" href="#" class="brand-logo"><img style="height: 60px; margin-top: 2px;" src="https://i.ibb.co/bKWqMfH/logocasamento.png"></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#index-banner"><b>Fotos</b></a></li>
+            <li><a href="#suarifa"><b>Rifas</b></a></li>
+            <li><a href="#informations"><b>Informações do Sorteio</b></a></li>
+          </ul>
+        </nav>
+      </div>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#index-banner"><b>Fotos</b></a></li>
+            <li><a href="#suarifa"><b>Rifas</b></a></li>
+            <li><a href="#informations"><b>Informações do Sorteio</b></a></li>
+          </ul>
+        </div>
+
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br />
+        <h1 class="header center orange-text" style="margin-bottom: 20px;"><img src="./images/logocasamento.png"></h1>
+          <h2 class="header center orange-text" style="margin-top: 10px;">Rifa R$ 40,00</h2>
+        <div class="row center">
+          <div class="carousel carousel-slider"data-indicators="true">
+            <div class="carousel-fixed-item center middle-indicator">
+              <div class="left">
+               <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+              </div>
+              
+              <div class="right">
+              <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+              </div>
+             </div>
+            <a class="carousel-item" href="#one!"><img src="https://i.ibb.co/grF1jLh/diagonal1.jpg"></a>    
+            <a class="carousel-item" href="#two!"><img src="https://i.ibb.co/QPMyvkf/portaaberta1.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="https://i.ibb.co/CMzJsvV/lateral1.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="https://i.ibb.co/hK9h1qr/frente1.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="https://i.ibb.co/MhRr5gZ/lateral2.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="https://i.ibb.co/JryrRPW/traseira1.jpg"></a>
+            <a class="carousel-item" href="#six!"><img src="https://i.ibb.co/9q2nNN3/roda1.jpg"></a>
+          </div>     
+          <div id="suarifa"></div>     
+        </div>
+       <hr />
+
+           <div class="container">
+              <!-- espaço -->
+              <div id="root">
+                <!-- REACT -->
+              </div>
+              </div>
+              <br/>
+              <hr />
+          </div>
+              <div class="container">
+                  <div class="form-tittle">
+                    <h4>
+                      <strong>
+                        <!-- <i class="small material-icons white-text" id="moneyicon">attach_money</i>  -->
+                          </strong>
+                          Informações para Pagamento
+                    </h4>
+                  </div>
+                </div>
+                  <div class="container">
+                    <div class="cards">
+                      <div class="row">
+                      <div class="col s12 m3">
+                        <div class="card" style="border: 2px solid #ffa31a; border-radius: 1.4%;">
+                          <div class="card-image">
+                            <img
+                              src="https://i.ibb.co/P9KCqzb/bancointer.png"
+                              id="bankimg"
+                              alt="Inter"
+                              style="background-color: orange;"
+                            />
+                          </div>
+                          <span class="card-title">Banco: Inter</span>
+                          <div class="card-content">
+                            <div>Favorecido: Felipe Júnio Mendes dos Santos</div>
+                            <div>CPF: 053.776.511-54</div>
+                            <div>Agência: 0001</div>
+                            <div>Conta: 3918116-2</div>
+                            <div>Tipo: Conta Corrente</div>
+                          </div>
+                          <div class="card-action">
+                            <a href="https://api.whatsapp.com/send?phone=5561998307491&text=Contato%20de%20Felipe%20Junio%20-%20Informa%C3%A7%C3%B5es%20sobre%20a%20rifa%20ou%20envio%20do%20comprovante%20de%20pagamento!" target="_blank">Enviar Comprovante</a>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="col s12 m3">
+                        <div class="card"  style="border: 2px solid rgba(168, 2, 168, 0.931); border-radius: 1.4%;">
+                          <div class="card-image">
+                            <img src="https://i.ibb.co/rd5vqX2/nubank.png"
+                            id="bankimg" alt="NuBank"
+                            />
+                          </div>
+                          <span class="card-title">Banco: NuBank</span>
+                          <div class="card-content">
+                            Favorecido: Felipe Júnio Mendes dos Santos
+                            <br/>
+                            CPF: 053.776.511-54
+                            <br/>
+                            Agência: 0001
+                            <br/>
+                            Conta: 549017-5
+                            <br/>
+                            Tipo: Conta Corrente
+                          </div>
+                          <div class="card-action">
+                            <a href="https://api.whatsapp.com/send?phone=5561998307491&text=Contato%20de%20Felipe%20Junio%20-%20Informa%C3%A7%C3%B5es%20sobre%20a%20rifa%20ou%20envio%20do%20comprovante%20de%20pagamento!" target="_blank">Enviar Comprovante</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s12 m3">
+                        <div class="card" style="border: 2px solid blue; border-radius: 1.4%;">
+                          <div class="card-image">
+                            <img
+                              src="https://i.ibb.co/cCZn3Tz/bancocaixa.jpg"
+                              id="bankimg" alt="Caixa"
+                            />
+                          </div>
+                          <span class="card-title">Banco: Caixa</span>
+                          <div class="card-content">
+                           <div>Favorecido: Felipe Júnio Mendes dos Santos</div>
+                           <div>CPF: 053.776.511-54</div>
+                           <div>Agência: 4461</div>
+                           <div>Conta: 2974-2</div>
+                           <div>Tipo: Poupança</div>
+                          </div>
+                          <div class="card-action">
+                            <a href="https://api.whatsapp.com/send?phone=5561998307491&text=Contato%20de%20Felipe%20Junio%20-%20Informa%C3%A7%C3%B5es%20sobre%20a%20rifa%20ou%20envio%20do%20comprovante%20de%20pagamento!" target="_blank">Enviar Comprovante</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col s12 m3">
+                        <div class="card" style="border: 2px solid lightgreen; border-radius: 1.4%;">
+                          <div class="card-image">
+                            <img src="https://i.ibb.co/JRqFbt8/picpaylogo.jpg" id="bankimg" alt="PicPay"
+                            />
+                          </div>
+                          <span class="card-title">Banco: PicPay</span>
+                          <div class="card-content">
+                            <div>Nome: <a href="https://app.picpay.com/user/felipe.junio10" target="_blank">@Felipe.junio10</div></a>
+                            
+                          </div>
+                            <img
+                              src="https://i.ibb.co/n3Kwbqt/qrcodepicpay.png"
+                              id="picqr"
+                              alt="picqrcode"
+                              style="margin-bottom: 32px;"
+                            />
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+               </div>
+      </div>
+      <br /><br />
+    </div>
+
+    <footer class="page-footer" id="backcolor">
+      <div class="container">
+        <div class="row">
+          <div class="col l12 s12">
+            <h5 class="white-text" id="informations">Informações Adicionais</h5>
+            <p class="grey-text text-lighten-4">
+              Leia todas as informações com atenção, caso tenha alguma dúvida entre em contato com o <a href="#contato";>NÚMERO</a> no final da página.<br/>
+              <br/>
+              INFORMAÇÕES PRINCIPAIS:
+              <br/>
+              <br/>
+              - Valor: R$ 40,00
+              <br/>
+              - Pagamento: Inter, PicPay, Nubank ou Caixa.
+              <br/>
+              <br/>
+              - Prazo da reserva: O número ficará reservado por 24h, e o pagamento terá que ser confirmado dentro deste prazo! 
+              <br/>
+              <!-- *Após a confirmação de 900 números pagos, os últimos 100 números terão o prazo de vencimento reduzido para 3hrs, 6hrs ou 12hrs após a reserva no site
+              <br/>
+              <br/> -->
+              - OBRIGATÓRIO: Enviar o comprovante de pagamento e seu nome completo via WHATSAPP, favor enviar com antecedência para o responsável, Felipe Junio <a href="https://api.whatsapp.com/send?phone=5561998307491&text=Contato%20de%20Felipe%20Junio%20-%20Informa%C3%A7%C3%B5es%20sobre%20a%20rifa%20ou%20envio%20do%20comprovante%20de%20pagamento!" target="_blank">(61) 99830-7491</a>.
+              <br/>
+              <br/>
+              - Depósito e transferência: O pagamento poderá ser feito via depósito ou transferência, seja no banco/agência, por aplicativo ou pessoalmente, NÃO ACEITAMOS DEPÓSITO POR *ENVELOPE* NO CAIXA ELETRÔNICO! 
+              <br/>
+              <br/>
+              <!-- - Bloqueio: O participante será bloqueado automaticamente no site caso não haja a confirmação do pagamento dentro do prazo de 24h
+              <br/>
+              <br/> -->
+              - Resultado: Para que o sorteio aconteça é necessário que todas as rifas sejam preenchidas e pagas, após isso, nos basearemos nos três últimos dígitos do 1° resultado que sair na loteria FEDERAL da mesma semana. Veja abaixo o exemplo:
+              <br/>
+              <br/>
+              1° 3<span style="color: black;"><b>187</b></span> 
+              <br/>
+              2° 4980
+              <br/>
+              3° 9637
+              <br/>
+              4° 7135
+              <br/>
+              5° 4450
+              <br/>
+              <br/>
+              Neste exemplo, o ganhador(a) foi a pessoa que comprou a Rifa n° <span style="color: black;"><b>187</b></span>
+              <br/>
+              <br/>
+              - Entrega do golf: COMO VAI SER A ENTREGA?!!!!! 
+              <br/>
+              <br/>
+              Obs: Recomenda-se que você atualize o site antes de reservar sua Rifa para confirmar se não houve problemas com a reserva, confirme também pelo botão <a href="#suarifa">SUA RIFA</a> após a reserva. 
+              <br/>
+              <br/>
+              INFORMAÇÕES DO CARRO JUNIO
+              Golf Black Edition 2.0 2010, câmbio automático, documentação ok, com rodas aro 20" da nova tiguan, pneus 205/30/20, suspensão fixa preparada, piloto automático, teto solar
+              <br/>
+              <br/>
+              INFORMAÇÕES CARRO JUNIO
+              *E mais opcionais de fábrica, como: retrovisor fotocrômico, ar condicionado, tilt down, vidros e travas elétricas e etc (completo de fábrica)...
+              <br/>
+              <br/>
+            </p>
+          </div>
+      </div>
+          
+          <div class="container"  style="text-align: center; border: 2px solid white;">
+
+            <!-- para mudar o tamanho do quadrado colocar width: 450px; height: 200px; -->
+
+            <h5 class="white-text">Caso tenha alguma dúvida, entrar em contato com Felipe Junio</h5>
+            <h7>Celular:</h7>
+            <div><i class="small material-icons white-text" id="moneyicon">phone_in_talk</i></div>
+            <h6 id="contato"> <a href="https://api.whatsapp.com/send?phone=5561998307491&text=Contato%20de%20Felipe%20Junio%20-%20Informa%C3%A7%C3%B5es%20sobre%20a%20rifa%20ou%20envio%20do%20comprovante%20de%20pagamento!" target="_blank" style="color: white;">(61) 99830-7491</a></h6>
+          </div>
+        </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by Nathan Souza Silva - Direitos reservados - 2020
+          <a class="orange-text text-lighten-3" href="http://materializecss.com"
+            >Materialize</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      //with jQuery
+      $(document).ready(function () {
+        $('.slider').slider();
+      });
+      $(document).ready(function(){
+    $('.carousel').carousel({indicators: false});
+  });
+  $('.moveNextCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('next');
+   });
+   $('.movePrevCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('prev');
+   });
+      $(document).ready(function () {
+        $('.tooltipped').tooltip();
+      });
+      $(document).ready(function () {
+        $('.fixed-action-btn').floatingActionButton();
+      });
+      $(document).ready(function(){
+    $('.modal').modal({ onOpenEnd: function() {
+            $('#inputTelRifa').focus();
+            $('#inputName').focus();
+
+            // or autofocus first one
+            // $(this).find('input').eq(0).focus();
+        }});
+  });
+    </script>
+  </body>
+</html>

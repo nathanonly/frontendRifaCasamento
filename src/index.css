@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('http://arquivo.devmedia.com.br/naoexclusivo/JoelRodrigues/Documentacao/css-background/bg1.jpg'); */
+}
+nav {
+  height: 70px;
+  line-height: 70px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.modal {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.center-cols > .col {
+  float: none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: initial; /* restore text-align to default */
+}
+#bankimg {
+  height: 150px;
+}
+
+.card {
+  text-align: center;
+}
+.carousel {
+  height: 700px;
+}
+
+a:hover {
+  color: lightgreen;
+  text-decoration: none;
+}
+
+.middle-indicator {
+  position: absolute;
+  top: 50%;
+}
+.middle-indicator-text {
+  font-size: 4.2rem;
+}
+a.middle-indicator-text {
+  color: white !important;
+}
+.content-indicator {
+  width: 64px;
+  height: 64px;
+  background: none;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.indicators {
+  visibility: hidden;
+}
+
+.default-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.padding {
+  padding: 10px;
+}
