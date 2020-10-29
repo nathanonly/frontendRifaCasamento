@@ -100,7 +100,7 @@ export default function App() {
 
     const getRifa = allGrades.filter((grade) => grade.rifanumber === idvalue);
     if (getRifa.length > 0) {
-      console.log(onlyGradeName);
+      // console.log(onlyGradeName);
       // console.log('AQUI' + JSON.stringify(getRifa)); stringify para ler o que tem no getRifa
     } else {
       let counterButton = finishButtonCounter;
@@ -111,7 +111,7 @@ export default function App() {
         getId.style = 'margin: 10px';
 
         arrayDados.push(rifanum);
-        console.log(rifanum);
+        // console.log(rifanum);
         setFinishButtonCounter(counterButton + 1);
         if (finishButtonCounter >= 0) {
           setFinishButtonAppear(true);
@@ -120,16 +120,16 @@ export default function App() {
         getId.className = 'btn-floating blue waves-effect';
         getId.style = 'margin: 5px';
 
-        let removerRifa = arrayDados.splice(arrayDados.indexOf(rifanum), 1);
-        console.log(arrayDados);
-        console.log(removerRifa);
+        arrayDados.splice(arrayDados.indexOf(rifanum), 1);
+        // console.log(arrayDados);
+        // console.log(removerRifa);
         setFinishButtonCounter(counterButton - 1);
 
         if (finishButtonCounter <= 1) {
           setFinishButtonAppear(false);
         }
       }
-      console.log(event.target);
+      //console.log(event.target);
     }
   };
 
@@ -140,17 +140,17 @@ export default function App() {
   const handleChangeNameValue = (event) => {
     const saveName = event.target.value;
     setSavedName(saveName);
-    console.log(saveName);
+    // console.log(saveName);
   };
   const handleChangeTelefoneValue = (event) => {
     const saveTelefone = event.target.value;
     setSavedTelefone(saveTelefone);
-    console.log(saveTelefone);
+    // console.log(saveTelefone);
   };
 
   const handleFormSubimit = async (event) => {
     event.preventDefault();
-    console.log(arrayDados);
+    //console.log(arrayDados);
     const lista = [];
 
     arrayDados.forEach(async (rifavalue) => {
@@ -165,7 +165,7 @@ export default function App() {
       lista.push(newData);
       // await api.insertGrade(newData);
 
-      console.log(lista);
+      //console.log(lista);
     });
     for (let i = 0; i < lista.length; i++) {
       await api.insertGrade(lista[i]);
@@ -204,14 +204,14 @@ export default function App() {
       }
       acertos.sort((a, b) => a - b);
       setDisponiveisRifas(acertos);
-      console.log(disponiveisRifas);
+      // console.log(disponiveisRifas);
       setValidaClick(false);
       setSuaRifa(false);
       setDisRifa(true);
     }
   };
   const handleReservadosButton = () => {
-    console.log('reservado');
+    //console.log('reservado');
     //setValidaClick(false);
   };
   const handlePagosButton = () => {
@@ -223,7 +223,7 @@ export default function App() {
     setSuaRifa(true);
     setDisRifa(false);
     allGrades.sort((a, b) => a - b);
-    console.log(allGrades);
+    //  console.log(allGrades);
   };
 
   const handleSuaRifaButton = () => {
@@ -389,10 +389,14 @@ export default function App() {
             </button>
           ))}
           <ReactTooltip id="cliente" backgroundColor="orange" effect="solid">
-            <span>{`Rifa ${onlyAtualRifa} paga por: ${onlyGradeName[0].substr(
-              0,
-              3
-            )}...${onlyGradeName[0].substr(-3)}`}</span>
+            <span>{`${
+              onlyGradeName.length > 0
+                ? `Rifa ${onlyAtualRifa} paga por: ${onlyGradeName[0].substr(
+                    0,
+                    3
+                  )}...${onlyGradeName[0].substr(-3)}`
+                : 'Erro'
+            }`}</span>
           </ReactTooltip>
         </div>
       )}
@@ -591,10 +595,10 @@ export default function App() {
             <p>Agradecemos seu apoio!</p>
           </div>
         </div>
+        <button className="modal-close waves-effect waves-green btn-flat btn center">
+          OK
+        </button>
         <div className="modal-footer">
-          <button className="modal-close waves-effect waves-green btn-flat btn">
-            OK
-          </button>
           <button
             id="infowindowbutton"
             className="left modal-close waves-effect waves-green btn-flat btn"
