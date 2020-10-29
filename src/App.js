@@ -434,7 +434,7 @@ export default function App() {
         <div className="fixed-action-btn">
           <button
             data-target="modal1"
-            className="btn-floating waves-effect btn-large green btn modal-trigger pulse"
+            className="btn-floating waves-effect btn-large cyan btn modal-trigger pulse"
             // onClick={callPayment}
           >
             <i className="large material-icons">done</i>
