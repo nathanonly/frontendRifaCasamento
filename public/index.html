@@ -293,10 +293,6 @@
               Gol bola 1.0, motor AT 2003, suspensão fixa, aro 15", pneus 185/60, documentação ok.
               <br/>
               <br/>
-              INFORMAÇÕES CARRO JUNIO
-              *E mais opcionais de fábrica, como: retrovisor fotocrômico, ar condicionado, tilt down, vidros e travas elétricas e etc (completo de fábrica)...
-              <br/>
-              <br/>
             </p>
           </div>
       </div>
@@ -352,6 +348,17 @@
       $(document).ready(function () {
         $('.fixed-action-btn').floatingActionButton();
       });
+      
+      $(window).on('load',function(){
+          if(sessionStorage.getItem("dontShow")) {
+          } else {
+              $('#openwindowmodal').modal('open');
+               $(document).on("click", "#infowindowbutton", function() {
+               sessionStorage.setItem("dontShow", "true");
+              });
+            }
+        });
+
       $(document).ready(function(){
     $('.modal').modal({ onOpenEnd: function() {
             $('#inputTelRifa').focus();

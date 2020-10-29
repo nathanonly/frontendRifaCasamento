@@ -172,39 +172,53 @@ export default function App() {
     }
   };
   const handleTodosButton = () => {
-    setValidaClick(true);
-    setSuaRifa(true);
+    if (!validaClick) {
+      setFinishButtonAppear(false);
+      setFinishButtonCounter(0);
+      setArrayDados([]);
+
+      setValidaClick(true);
+      setSuaRifa(true);
+      setDisRifa(false);
+    }
   };
   const handleDisponiveisButton = () => {
     //console.log('disponivel');
-    setFinishButtonAppear(false);
-    setFinishButtonCounter(0);
-    setArrayDados([]);
-    const disponiveis = allGrades.map((grade) => parseInt(grade.rifanumber));
-    let acertos = [];
-    for (let i = 1; i < array.length; i++) {
-      if (disponiveis.indexOf(array[i]) < 0) {
-        acertos.push(array[i]);
+    if (!disRifa) {
+      setFinishButtonAppear(false);
+      setFinishButtonCounter(0);
+      setArrayDados([]);
+
+      const disponiveis = allGrades.map((grade) => parseInt(grade.rifanumber));
+      let acertos = [];
+      for (let i = 1; i < array.length; i++) {
+        if (disponiveis.indexOf(array[i]) < 0) {
+          acertos.push(array[i]);
+        }
       }
+      const finalRifa = allGrades.filter(
+        (grade) => parseInt(grade.rifanumber) === 999
+      );
+      if (finalRifa.length === 0) {
+        acertos.push(999);
+      }
+      acertos.sort((a, b) => a - b);
+      setDisponiveisRifas(acertos);
+      console.log(disponiveisRifas);
+      setValidaClick(false);
+      setSuaRifa(false);
+      setDisRifa(true);
     }
-    const finalRifa = allGrades.filter(
-      (grade) => parseInt(grade.rifanumber) === 999
-    );
-    if (finalRifa.length === 0) {
-      acertos.push(999);
-    }
-    acertos.sort((a, b) => a - b);
-    setDisponiveisRifas(acertos);
-    console.log(disponiveisRifas);
-    setValidaClick(false);
-    setSuaRifa(false);
-    setDisRifa(true);
   };
   const handleReservadosButton = () => {
     console.log('reservado');
     //setValidaClick(false);
   };
   const handlePagosButton = () => {
+    setFinishButtonAppear(false);
+    setFinishButtonCounter(0);
+    setArrayDados([]);
+
     setValidaClick(false);
     setSuaRifa(true);
     setDisRifa(false);
@@ -221,6 +235,7 @@ export default function App() {
     setSuaRifaNum(rifanum);
     setSuaRifa(false);
     setDisRifa(false);
+    setValidaClick(false);
   };
 
   const handleCloseRifa = () => {
@@ -318,10 +333,16 @@ export default function App() {
           >
             <span>{`${
               onlyGradeName.length > 0 && onlySituacao === true
-                ? `Rifa ${onlyAtualRifa} paga por: ${onlyGradeName}`
+                ? `Rifa ${onlyAtualRifa} paga por: ${onlyGradeName[0].substr(
+                    0,
+                    3
+                  )}...${onlyGradeName[0].substr(-3)}`
                 : 'Erro'
                 ? onlyGradeName.length > 0 && onlySituacao === false
-                  ? `Rifa ${onlyAtualRifa} reservada por: ${onlyGradeName}`
+                  ? `Rifa ${onlyAtualRifa} reservada por: ${onlyGradeName[0].substr(
+                      0,
+                      3
+                    )}...${onlyGradeName[0].substr(-3)}`
                   : 'Rifa Disponível'
                 : 'Erro'
             }`}</span>
@@ -368,7 +389,10 @@ export default function App() {
             </button>
           ))}
           <ReactTooltip id="cliente" backgroundColor="orange" effect="solid">
-            <span>{`Rifa ${onlyAtualRifa} paga por: ${onlyGradeName}`}</span>
+            <span>{`Rifa ${onlyAtualRifa} paga por: ${onlyGradeName[0].substr(
+              0,
+              3
+            )}...${onlyGradeName[0].substr(-3)}`}</span>
           </ReactTooltip>
         </div>
       )}
@@ -408,7 +432,7 @@ export default function App() {
             id="cliente"
             backgroundColor={`${
               onlyGradeName.length > 0 && onlySituacao === true
-                ? 'red'
+                ? 'orange'
                 : 'Erro'
                 ? onlyGradeName.length > 0 && onlySituacao === false
                   ? 'green'
@@ -419,10 +443,16 @@ export default function App() {
           >
             <span>{`${
               onlyGradeName.length > 0 && onlySituacao === true
-                ? `Rifa ${onlyAtualRifa} paga por: ${onlyGradeName}`
+                ? `Rifa ${onlyAtualRifa} paga por: ${onlyGradeName[0].substr(
+                    0,
+                    3
+                  )}...${onlyGradeName[0].substr(-3)}`
                 : 'Erro'
                 ? onlyGradeName.length > 0 && onlySituacao === false
-                  ? `Rifa ${onlyAtualRifa} reservada por: ${onlyGradeName}`
+                  ? `Rifa ${onlyAtualRifa} reservada por: ${onlyGradeName[0].substr(
+                      0,
+                      3
+                    )}...${onlyGradeName[0].substr(-3)}`
                   : 'Rifa Disponível'
                 : 'Erro'
             }`}</span>
@@ -469,6 +499,7 @@ export default function App() {
         </div>
         <div className="modal-footer">
           <button
+            disabled={savedTelefone.length === 0}
             onClick={handleFormSubimit}
             className="modal-close waves-effect waves-green btn-flat modal-trigger"
             data-target="finalmodal"
@@ -526,7 +557,7 @@ export default function App() {
           <h4>
             <i className="medium material-icons">done</i>Parabéns!
           </h4>
-          <hr />
+          <hr style={{ color: 'black' }} />
           <div>
             <p>A reserva foi realizada com sucesso!</p>
             <p>
@@ -546,6 +577,29 @@ export default function App() {
             className="modal-close waves-effect waves-green btn-flat btn"
           >
             OK
+          </button>
+        </div>
+      </div>
+
+      <div id="openwindowmodal" className="modal">
+        <div className="modal-content">
+          <h4>Bem-vindo!</h4>
+          <hr style={{ color: 'black' }} />
+          <div>
+            <p>Nós vamos nos casar, Anna Bia e Felipe Junio!</p>
+            <p>Rifas no valor de R$ 40,00 cada.</p>
+            <p>Agradecemos seu apoio!</p>
+          </div>
+        </div>
+        <div className="modal-footer">
+          <button className="modal-close waves-effect waves-green btn-flat btn">
+            OK
+          </button>
+          <button
+            id="infowindowbutton"
+            className="left modal-close waves-effect waves-green btn-flat btn"
+          >
+            Não mostrar mais essa mensagem
           </button>
         </div>
       </div>
