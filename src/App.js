@@ -604,13 +604,13 @@ export default function App() {
             <p>Assinado: Anna Bia e Felipe Junio.</p>
           </div>
         </div>
-        <button className="modal-close waves-effect waves-green btn-flat btn center">
+        <button className="modal-close waves-effect waves-green green btn center">
           OK
         </button>
         <div className="modal-footer">
           <button
             id="infowindowbutton"
-            className="left modal-close waves-effect waves-green btn-flat btn"
+            className="left modal-close waves-effect waves-green orange btn-flat btn"
           >
             Esconder essa mensagem
           </button>
