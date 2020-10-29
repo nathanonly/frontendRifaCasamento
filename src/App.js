@@ -103,32 +103,27 @@ export default function App() {
       console.log(onlyGradeName);
       // console.log('AQUI' + JSON.stringify(getRifa)); stringify para ler o que tem no getRifa
     } else {
-      let newDisponivel = countBoxes - pagoBoxes;
-      let pagos = countBoxes - newDisponivel;
       let counterButton = finishButtonCounter;
 
       arrayDados.sort((a, b) => a - b);
-      if (getId.className === 'btn-floating waves-effect') {
+      if (getId.className === 'btn-floating blue waves-effect') {
         getId.className = 'btn-floating waves-effect yellow';
         getId.style = 'margin: 10px';
 
         arrayDados.push(rifanum);
         console.log(rifanum);
         setFinishButtonCounter(counterButton + 1);
-        setPagoBoxes(++pagos);
         if (finishButtonCounter >= 0) {
           setFinishButtonAppear(true);
         }
       } else {
-        getId.className = 'btn-floating waves-effect';
+        getId.className = 'btn-floating blue waves-effect';
         getId.style = 'margin: 5px';
-        pagos = pagoBoxes - 1;
 
         let removerRifa = arrayDados.splice(arrayDados.indexOf(rifanum), 1);
         console.log(arrayDados);
         console.log(removerRifa);
         setFinishButtonCounter(counterButton - 1);
-        setPagoBoxes(pagos);
 
         if (finishButtonCounter <= 1) {
           setFinishButtonAppear(false);
@@ -181,7 +176,10 @@ export default function App() {
     setSuaRifa(true);
   };
   const handleDisponiveisButton = () => {
-    console.log('disponivel');
+    //console.log('disponivel');
+    setFinishButtonAppear(false);
+    setFinishButtonCounter(0);
+    setArrayDados([]);
     const disponiveis = allGrades.map((grade) => parseInt(grade.rifanumber));
     let acertos = [];
     for (let i = 1; i < array.length; i++) {
@@ -256,7 +254,7 @@ export default function App() {
         <button
           onClick={handlePagosButton}
           id="download-button"
-          className="btn-large waves-effect waves-light yellow"
+          className="btn-large waves-effect waves-light orange"
         >
           Pagos ({pagoBoxes})
         </button>
@@ -282,7 +280,7 @@ export default function App() {
                     parseInt(grade.rifanumber) === item + 1 &&
                     grade.baixa === true
                 ).length === 1
-                  ? 'btn-floating yellow btn modal-trigger'
+                  ? 'btn-floating orange btn modal-trigger'
                   : 'Erro'
                   ? allGrades.filter(
                       (grade) =>
@@ -290,7 +288,7 @@ export default function App() {
                         grade.baixa === false
                     ).length === 1
                     ? 'btn-floating green btn modal-trigger'
-                    : 'btn-floating waves-effect'
+                    : 'btn-floating blue waves-effect'
                   : 'Erro'
               }`}
               onMouseOver={InformacaoRifa}
@@ -309,7 +307,7 @@ export default function App() {
             id="cliente"
             backgroundColor={`${
               onlyGradeName.length > 0 && onlySituacao === true
-                ? 'red'
+                ? 'orange'
                 : 'Erro'
                 ? onlyGradeName.length > 0 && onlySituacao === false
                   ? 'green'
@@ -335,7 +333,7 @@ export default function App() {
           {disponiveisRifas.map((disrifa) => (
             <button
               key={disrifa}
-              className="btn-floating waves-effect"
+              className="btn-floating blue waves-effect"
               onMouseOver={InformacaoRifa}
               data-tip
               data-for="discliente"
@@ -357,7 +355,7 @@ export default function App() {
           {rifasPagas.map((rifa) => (
             <button
               key={rifa}
-              className="btn-floating yellow btn modal-trigger"
+              className="btn-floating orange btn modal-trigger"
               onMouseOver={InformacaoRifa}
               data-tip
               data-for="cliente"
@@ -369,7 +367,7 @@ export default function App() {
               {rifa}
             </button>
           ))}
-          <ReactTooltip id="cliente" type="warning" effect="solid">
+          <ReactTooltip id="cliente" backgroundColor="orange" effect="solid">
             <span>{`Rifa ${onlyAtualRifa} paga por: ${onlyGradeName}`}</span>
           </ReactTooltip>
         </div>
@@ -385,7 +383,7 @@ export default function App() {
                   (grade) =>
                     grade.rifanumber === rifafil && grade.baixa === true
                 ).length === 1
-                  ? 'btn-floating yellow btn modal-trigger'
+                  ? 'btn-floating orange btn modal-trigger'
                   : 'Erro'
                   ? allGrades.filter(
                       (grade) =>
