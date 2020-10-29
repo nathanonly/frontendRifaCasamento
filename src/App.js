@@ -210,10 +210,7 @@ export default function App() {
       setDisRifa(true);
     }
   };
-  const handleReservadosButton = () => {
-    //console.log('reservado');
-    //setValidaClick(false);
-  };
+
   const handlePagosButton = () => {
     setFinishButtonAppear(false);
     setFinishButtonCounter(0);
@@ -260,12 +257,16 @@ export default function App() {
         </button>
 
         <button
-          onClick={handleReservadosButton}
           id="download-button"
-          className="btn-large waves-effect waves-light green"
+          data-tip
+          data-for="reserbuttons"
+          className="btn-large green"
         >
           Reservados ({reservadoBoxes})
         </button>
+        <ReactTooltip id="reserbuttons" backgroundColor="green" effect="solid">
+          <span>Esse botão é apenas informativo</span>
+        </ReactTooltip>
         <button
           onClick={handlePagosButton}
           id="download-button"
