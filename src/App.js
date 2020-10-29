@@ -460,6 +460,7 @@ export default function App() {
               id="inputTel"
               type="text"
               onChange={handleChangeTelefoneValue}
+              placeholder="(00)00000-0000"
             />
             <label className="active" htmlFor="inputTel">
               Número para Contato:
@@ -487,6 +488,7 @@ export default function App() {
             <input
               id="inputTelRifa"
               type="text"
+              placeholder="(00)00000-0000"
               onChange={handleChangeTelefoneValue}
             />
             <label className="active" htmlFor="inputTelRifa">
