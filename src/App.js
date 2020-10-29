@@ -528,7 +528,7 @@ export default function App() {
               onChange={handleChangeTelefoneValue}
             />
             <label className="active" htmlFor="inputTelRifa">
-              Digite o número de telefone utilizado para reservar a rifa:
+              Número de telefone utilizado para reservar a rifa:
             </label>
           </div>
         </div>
@@ -591,9 +591,17 @@ export default function App() {
           <h4>Bem-vindo!</h4>
           <hr style={{ color: 'black' }} />
           <div>
-            <p>Nós vamos nos casar, Anna Bia e Felipe Junio!</p>
-            <p>Rifas no valor de R$ 40,00 cada.</p>
-            <p>Agradecemos seu apoio!</p>
+            <p>Nós vamos nos casar!</p>
+            <p>
+              Selecione as rifas que quiser comprar, valor de R$ 40,00 cada.
+            </p>
+            <p>
+              Para demais informações clique no botão "Informações do Sorteio"
+              ou vá para o final da página.
+            </p>
+            <br />
+            <p>Muito obrigado!</p>
+            <p>Assinado: Anna Bia e Felipe Junio.</p>
           </div>
         </div>
         <button className="modal-close waves-effect waves-green btn-flat btn center">
@@ -604,7 +612,7 @@ export default function App() {
             id="infowindowbutton"
             className="left modal-close waves-effect waves-green btn-flat btn"
           >
-            Não mostrar mais essa mensagem
+            Esconder essa mensagem
           </button>
         </div>
       </div>
