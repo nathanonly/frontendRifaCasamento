@@ -590,11 +590,13 @@ export default function App() {
         <div className="modal-content">
           <h4>Bem-vindo!</h4>
           <hr style={{ color: 'black' }} />
-          <div>
-            <p>Nós vamos nos casar!</p>
-
-            <p>Assinado: Anna Bia e Felipe Junio.</p>
-          </div>
+          <p>Nós vamos nos casar!</p>
+          <p>Selecione as rifas que quiser comprar, valor de R$ 40,00 cada.</p>
+          Para demais informações clique no botão "Informações do Sorteio"
+          <br />
+          <br />
+          <p>Muito obrigado!</p>
+          <p>Assinado: Anna Bia e Felipe Junio.</p>
         </div>
         <button className="modal-close waves-effect waves-green btn-flat btn center">
           OK
