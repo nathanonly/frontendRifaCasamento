@@ -594,17 +594,16 @@ export default function App() {
           <p>Selecione as rifas que quiser comprar, valor de R$ 40,00 cada.</p>
           Para demais informações clique no botão "Informações do Sorteio"
           <br />
-          <br />
           <p>Muito obrigado!</p>
           <p>Assinado: Anna Bia e Felipe Junio.</p>
-        </div>
-        <button className="modal-close waves-effect waves-green btn-flat btn center">
-          OK
-        </button>
-        <div className="modal-footer">
+          <button className="modal-close waves-effect waves-green btn-flat btn center">
+            OK
+          </button>
+          <br />
+          <br />
           <button
             id="infowindowbutton"
-            className="left modal-close waves-effect waves-green btn-flat btn"
+            className="center modal-close waves-effect waves-green btn-flat btn"
           >
             Esconder essa mensagem
           </button>
