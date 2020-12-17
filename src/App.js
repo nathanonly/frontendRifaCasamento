@@ -47,7 +47,7 @@ export default function App() {
     };
     getGrades();
   }, []);
-
+  //obs
   useEffect(() => {
     setArrayDados((arrayDados) => [...arrayDados]);
   }, []);
