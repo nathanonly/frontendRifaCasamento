@@ -283,6 +283,9 @@ export default function App() {
         </button>
       </div>
       <br />
+      <p style={{ color: 'blue', fontFamily: 'arial', fontWeight: 'bold' }}>
+        Lembrete: Sorteio previsto para Janeiro
+      </p>
       <br />
       {allGrades.length === 0 && <Spinner />}
       {validaClick && suaRifa && (
@@ -371,7 +374,6 @@ export default function App() {
           </ReactTooltip>
         </div>
       )}
-
       {!validaClick && suaRifa && (
         <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap' }}>
           {rifasPagas.map((rifa) => (
@@ -401,7 +403,6 @@ export default function App() {
           </ReactTooltip>
         </div>
       )}
-
       {!suaRifa && !disRifa && (
         <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap' }}>
           {suaRifaNum.map((rifafil) => (
@@ -464,7 +465,6 @@ export default function App() {
           </ReactTooltip>
         </div>
       )}
-
       {finishButtonAppear && (
         <div className="fixed-action-btn">
           <button
@@ -516,7 +516,6 @@ export default function App() {
           </button>
         </div>
       </div>
-
       <div id="modalsuarifa" className="modal">
         <div className="modal-content">
           <h4>Buscar sua Rifa</h4>
@@ -544,7 +543,6 @@ export default function App() {
           </button>
         </div>
       </div>
-
       <div id="modalPago" className="modal">
         <div style={{ color: 'red' }} className="modal-content">
           <h4>Aviso</h4>
@@ -556,7 +554,6 @@ export default function App() {
           </button>
         </div>
       </div>
-
       <div id="finalmodal" className="modal">
         <div className="modal-content">
           <h4>
@@ -585,17 +582,18 @@ export default function App() {
           </button>
         </div>
       </div>
-
       <div id="openwindowmodal" className="modal">
         <div className="modal-content">
           <h4>Bem-vindo!</h4>
           <hr style={{ color: 'black' }} />
           <p>Nós vamos nos casar!</p>
           <p>Selecione as rifas que quiser comprar, valor de R$ 40,00 cada.</p>
-          Para demais informações clique no botão "Informações do Sorteio"
-          <br />
-          <p>Muito obrigado!</p>
+          Para demais informações clique no botão "Informações do Sorteio",
+          muito obrigado!
           <p>Assinado: Anna Bia e Felipe Junio.</p>
+          <p style={{ color: 'blue' }}>
+            OBSERVAÇÃO: Sorteio previsto para o mês de Janeiro
+          </p>
           <button className="modal-close waves-effect waves-green btn-flat btn center">
             OK
           </button>
