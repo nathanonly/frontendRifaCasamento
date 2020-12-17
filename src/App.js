@@ -588,8 +588,8 @@ export default function App() {
           <hr style={{ color: 'black' }} />
           <p>Nós vamos nos casar!</p>
           <p>Selecione as rifas que quiser comprar, valor de R$ 40,00 cada.</p>
-          Para demais informações clique no botão "Informações do Sorteio",
-          muito obrigado!
+          Para mais informações clique no botão "Informações do Sorteio", muito
+          obrigado!
           <p>Assinado: Anna Bia e Felipe Junio.</p>
           <p style={{ color: 'blue' }}>
             OBSERVAÇÃO: Sorteio previsto para o mês de Janeiro
