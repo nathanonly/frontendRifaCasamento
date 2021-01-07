@@ -283,9 +283,9 @@ export default function App() {
         </button>
       </div>
       <br />
-      <p style={{ color: 'blue', fontFamily: 'arial', fontWeight: 'bold' }}>
+      {/* <p style={{ color: 'blue', fontFamily: 'arial', fontWeight: 'bold' }}>
         Lembrete: Sorteio previsto para Janeiro
-      </p>
+      </p> */}
       <br />
       {allGrades.length === 0 && <Spinner />}
       {validaClick && suaRifa && (
@@ -591,9 +591,9 @@ export default function App() {
           Para mais informações clique no botão "Informações do Sorteio", muito
           obrigado!
           <p>Assinado: Anna Bia e Felipe Junio.</p>
-          <p style={{ color: 'blue' }}>
+          {/* <p style={{ color: 'blue' }}>
             OBSERVAÇÃO: Sorteio previsto para o mês de Janeiro
-          </p>
+          </p> */}
           <button className="modal-close waves-effect waves-green btn-flat btn center">
             OK
           </button>
